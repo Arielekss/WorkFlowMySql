@@ -36,9 +36,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 233);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 163);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(563, 51);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(564, 99);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // dgTicketView
@@ -49,14 +49,14 @@
             this.dgTicketView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTicketView.Location = new System.Drawing.Point(0, 0);
             this.dgTicketView.Name = "dgTicketView";
-            this.dgTicketView.Size = new System.Drawing.Size(563, 233);
+            this.dgTicketView.Size = new System.Drawing.Size(564, 163);
             this.dgTicketView.TabIndex = 1;
             // 
             // FrmViewTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 284);
+            this.ClientSize = new System.Drawing.Size(564, 262);
             this.Controls.Add(this.dgTicketView);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FrmViewTicket";
