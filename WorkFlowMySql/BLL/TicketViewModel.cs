@@ -16,5 +16,13 @@ namespace WorkFlowMySql.BLL
                 return context.Ticket.ToList();
             }
         }
+
+        public List<TicketModel> GetTicketListByUser(string user)
+        {
+            using (var context = new WorkFlowContext())
+            {
+                return context.Ticket.Where(s => s.UserRegister == user).ToList();
+            }
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginMenu));
             this.btnLogIn = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtLogin = new System.Windows.Forms.TextBox();
@@ -103,6 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(272, 156);
             this.Controls.Add(this.llblRegister);
             this.Controls.Add(this.label2);
@@ -111,8 +113,9 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogIn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLoginMenu";
-            this.Text = "Form1";
+            this.Text = "Log In";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -43,7 +43,7 @@
             this.dgTicketView.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgTicketView.Location = new System.Drawing.Point(0, 0);
             this.dgTicketView.Name = "dgTicketView";
-            this.dgTicketView.Size = new System.Drawing.Size(563, 216);
+            this.dgTicketView.Size = new System.Drawing.Size(936, 216);
             this.dgTicketView.TabIndex = 1;
             // 
             // panel1
@@ -52,14 +52,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 222);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 62);
+            this.panel1.Size = new System.Drawing.Size(936, 62);
             this.panel1.TabIndex = 2;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(476, 27);
+            this.btnClose.Location = new System.Drawing.Point(849, 27);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(563, 284);
+            this.ClientSize = new System.Drawing.Size(936, 284);
             this.Controls.Add(this.dgTicketView);
             this.Controls.Add(this.panel1);
             this.Name = "FrmViewTicket";
