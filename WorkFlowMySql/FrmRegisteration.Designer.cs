@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegisteration));
             this.txtPass = new System.Windows.Forms.TextBox();
             this.cbUserType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,7 +60,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(31, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
@@ -69,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 13);
@@ -79,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
@@ -90,7 +92,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(172, 180);
+            this.btnCancel.Location = new System.Drawing.Point(117, 175);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
@@ -101,7 +103,7 @@
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.Location = new System.Drawing.Point(91, 180);
+            this.btnOk.Location = new System.Drawing.Point(36, 175);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 7;
@@ -120,8 +122,9 @@
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(259, 215);
+            this.ClientSize = new System.Drawing.Size(204, 210);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
@@ -131,10 +134,11 @@
             this.Controls.Add(this.cbUserType);
             this.Controls.Add(this.txtPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRegisteration";
-            this.Text = "FrmRegisteration";
+            this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
 

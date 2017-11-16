@@ -16,10 +16,19 @@ namespace WorkFlowMySql.GUI
     {
         BindingList<TicketModel> ticketList = new BindingList<TicketModel>();
         TicketViewModel ticketView = new TicketViewModel();
+        private string userName;
+
         public FrmViewTicket()
         {
             InitializeComponent();
         }
+
+        public FrmViewTicket(string userName)
+        {
+            InitializeComponent();
+            this.userName = userName;
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -28,7 +37,11 @@ namespace WorkFlowMySql.GUI
 
         private void RefreshList()
         {
-            dgTicketView.DataSource = ticketView.GetTicketList();
+            if (string.IsNullOrEmpty(userName))
+                dgTicketView.DataSource = ticketView.GetTicketList();
+
+            else
+                dgTicketView.DataSource = ticketView.GetTicketListByUser(userName);
         }
     }
 }

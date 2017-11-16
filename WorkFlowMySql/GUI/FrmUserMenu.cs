@@ -51,5 +51,13 @@ namespace WorkFlowMySql.GUI
                 frm.ShowDialog(this);
             }
         }
+
+        private void btnUserTick_Click(object sender, EventArgs e)
+        {
+            using (FrmViewTicket frm = new FrmViewTicket(user.UserName))
+            {
+                frm.ShowDialog(this);
+            }
+        }
     }
 }

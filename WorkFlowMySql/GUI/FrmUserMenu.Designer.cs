@@ -94,6 +94,7 @@
             this.btnUserTick.TabIndex = 5;
             this.btnUserTick.Text = "User Ticket";
             this.btnUserTick.UseVisualStyleBackColor = true;
+            this.btnUserTick.Click += new System.EventHandler(this.btnUserTick_Click);
             // 
             // FrmUserMenu
             // 
