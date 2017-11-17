@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WorkflowMVC.Models;
+using WorkFlowMySql.BLL;
 using WorkFlowMySql.Data;
 
 namespace WorkflowMVC.Controllers
@@ -10,6 +12,7 @@ namespace WorkflowMVC.Controllers
     public class HomeController : Controller
     {
         TicketModel ticketModel = new TicketModel();
+        WorkFlowMySql.BLL.TicketCreator ticketCreator = new TicketCreator();
         public ActionResult Index()
         {
             return View();
@@ -29,10 +32,10 @@ namespace WorkflowMVC.Controllers
             return View();
         }
 
-        public ActionResult CreateTicket()
+        public ActionResult CreateTicket(TicketModel ticketModel)
         {
             ViewBag.Message = "Your application description page.";
-
+            ticketCreator.SendTicketToDb(ticketModel);
             return View();
         }
 

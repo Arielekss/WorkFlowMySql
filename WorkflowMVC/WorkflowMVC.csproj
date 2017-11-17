@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="MapMethods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -214,7 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkFlowMySql\WorkFlowMySql.csproj">
-      <Project>{F970BD9D-79C0-46DA-A2BD-60FEB73B4986}</Project>
+      <Project>{f970bd9d-79c0-46da-a2bd-60feb73b4986}</Project>
       <Name>WorkFlowMySql</Name>
     </ProjectReference>
   </ItemGroup>

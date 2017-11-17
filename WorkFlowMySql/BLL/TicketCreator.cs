@@ -10,6 +10,7 @@ namespace WorkFlowMySql.BLL
 {
     public class TicketCreator
     {
+        
         public DateTime CalculateDeadline(string priority)
         {
             DateTime deadline = DateTime.Now;

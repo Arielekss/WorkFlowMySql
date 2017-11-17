@@ -1,5 +1,4 @@
-﻿
-@model WorkflowMVC.Models.Ticket
+﻿@model WorkFlowMySql.Data.TicketModel
 
 @{
     ViewBag.Title = "TicketCreator";
@@ -7,3 +6,31 @@
 
 <h2>TicketCreator</h2>
 
+@{
+    ViewBag.Title = "TicketCreator";
+}
+
+<h2>TicketCreator</h2>
+@using (Html.BeginForm("CreateTicket", "Home", FormMethod.Post))
+{
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Header</label>
+                    @Html.TextBoxFor(m => m.Header, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Ticket Content</label>
+                    @Html.PasswordFor(m => m.Content, new { @class = "form-control form-control-lg" })
+                </div>
+            </div>
+
+            <div>
+                <button id="submitt" style="display:none" class="btn btn-primary">Send ticket</button>
+            </div>
+        </div>
+    </form>
+}
