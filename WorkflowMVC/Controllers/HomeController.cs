@@ -28,7 +28,6 @@ namespace WorkflowMVC.Controllers
         public ActionResult TicketCreator()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

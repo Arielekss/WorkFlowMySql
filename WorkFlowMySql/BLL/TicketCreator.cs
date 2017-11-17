@@ -27,9 +27,11 @@ namespace WorkFlowMySql.BLL
         {
             using (var context = new WorkFlowContext())
             {
+                if(ticketModel.Priority == null)
+                ticketModel.Deadline = CalculateDeadline(ticketModel.Priority);
+
                 context.Ticket.Add(ticketModel);
                 context.SaveChanges();
-                MessageBox.Show("Ticket was send");
             }
         }
     }
