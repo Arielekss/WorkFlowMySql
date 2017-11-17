@@ -1,0 +1,36 @@
+﻿
+
+@using WorkflowMVC.Models
+@model List<WorkflowMVC.Models.Ticket>
+
+@{
+    ViewBag.Title = "TicketList";
+}
+
+<h2>TicketList</h2>
+
+@using (Html.BeginForm("GetTicket", "Home", FormMethod.Post))
+{
+    <form>
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Column heading</th>
+                <th>Column heading</th>
+            </tr>
+            </thead>
+            <tbody>
+                    
+            @foreach (Ticket ticket in Model)
+            {
+                <tr>
+                    <td>1</td>
+                    <td>@ticket.Header</td>
+                    <td>@ticket.Content</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </form>
+}

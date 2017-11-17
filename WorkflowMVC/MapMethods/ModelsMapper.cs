@@ -22,9 +22,28 @@ namespace WorkflowMVC.MapMethods
                 ActiveUser = ticket.ActiveUser,
                 Deadline = ticket.Deadline,
                 CloseDate = ticket.CloseDate
-                
             };
+        }
 
+        public List<Ticket> MapTicketModelList2TicketList(List<TicketModel> ticket)
+        {
+            List<Ticket> ticketList = new List<Ticket>();
+            foreach (TicketModel ticketModel in ticket)
+            {
+                ticketList.Add(new Ticket()
+                {
+                    Header = ticketModel.Header,
+                    Content = ticketModel.Content,
+                    Priority = ticketModel.Priority,
+                    RegisterDate = ticketModel.RegisterDate,
+                    UserRegister = ticketModel.UserRegister,
+                    TicketId = ticketModel.TicketId,
+                    ActiveUser = ticketModel.ActiveUser,
+                    Deadline = ticketModel.Deadline,
+                    CloseDate = ticketModel.CloseDate
+                });
+            }
+            return ticketList;
         }
     }
 }
