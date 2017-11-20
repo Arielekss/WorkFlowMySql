@@ -11,16 +11,16 @@
 {
     <form>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label class="col-form-label" for="inputDefault">Header</label>
                     @Html.TextBoxFor(m => m.Header, new { @class = "form-control" })
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label class="col-form-label" for="inputDefault">Ticket Content</label>
-                    @Html.PasswordFor(m => m.Content, new { @class = "form-control form-control-lg" })
+                    @Html.TextAreaFor(m => m.Content, new { @class = "form-control form-control-lg", rows = "12", style = "min-width: 100%" })
                 </div>
             </div>
             <div class="col-md-12">

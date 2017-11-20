@@ -31,8 +31,12 @@ namespace WorkflowMVC.Controllers
         
         public ActionResult TicketCreator(Ticket ticket)
         {
-            if(!string.IsNullOrEmpty(ticket.Header))
+            if (!string.IsNullOrEmpty(ticket.Header))
+            {
+                MapStringToPriorityMapper();
                 ticketCreator.SendTicketToDb(mapper.MapTicket2TicketModel(ticket));
+            }
+                
             ViewBag.Message = "Your application description page.";
             return View();
         }
