@@ -98,9 +98,9 @@
     <Compile Include="Migrations\201710211127495_AddTicket.Designer.cs">
       <DependentUpon>201710211127495_AddTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711172212248_asda.cs" />
-    <Compile Include="Migrations\201711172212248_asda.Designer.cs">
-      <DependentUpon>201711172212248_asda.cs</DependentUpon>
+    <Compile Include="Migrations\201711201713089_sad.cs" />
+    <Compile Include="Migrations\201711201713089_sad.Designer.cs">
+      <DependentUpon>201711201713089_sad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserModel.cs" />
@@ -137,8 +137,8 @@
     <EmbeddedResource Include="Migrations\201710211127495_AddTicket.resx">
       <DependentUpon>201710211127495_AddTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711172212248_asda.resx">
-      <DependentUpon>201711172212248_asda.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711201713089_sad.resx">
+      <DependentUpon>201711201713089_sad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

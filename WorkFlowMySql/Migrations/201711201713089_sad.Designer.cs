@@ -7,13 +7,13 @@ namespace WorkFlowMySql.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class asda : IMigrationMetadata
+    public sealed partial class sad : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(asda));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(sad));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711172212248_asda"; }
+            get { return "201711201713089_sad"; }
         }
         
         string IMigrationMetadata.Source
