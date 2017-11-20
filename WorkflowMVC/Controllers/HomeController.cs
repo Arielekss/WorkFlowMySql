@@ -33,7 +33,6 @@ namespace WorkflowMVC.Controllers
         {
             if (!string.IsNullOrEmpty(ticket.Header))
             {
-                MapStringToPriorityMapper();
                 ticketCreator.SendTicketToDb(mapper.MapTicket2TicketModel(ticket));
             }
                 

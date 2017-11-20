@@ -21,7 +21,8 @@ namespace WorkflowMVC.MapMethods
                 TicketId = ticket.TicketId,
                 ActiveUser = ticket.ActiveUser,
                 Deadline = ticket.Deadline,
-                CloseDate = ticket.CloseDate
+                CloseDate = ticket.CloseDate,
+                Response = ticket.Response
             };
         }
 
@@ -40,7 +41,8 @@ namespace WorkflowMVC.MapMethods
                     TicketId = ticketModel.TicketId,
                     ActiveUser = ticketModel.ActiveUser,
                     Deadline = ticketModel.Deadline,
-                    CloseDate = ticketModel.CloseDate
+                    CloseDate = ticketModel.CloseDate,
+                    Response = ticketModel.Response
                 });
             }
             return ticketList;

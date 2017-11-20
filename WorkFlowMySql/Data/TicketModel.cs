@@ -19,5 +19,6 @@ namespace WorkFlowMySql.Data
         public DateTime? CloseDate { get; set; }
         public string Priority { get; set; }
         public DateTime Deadline { get; set; }
+        public string Response { get; set; }
     }
 }
