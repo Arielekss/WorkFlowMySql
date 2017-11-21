@@ -48,10 +48,7 @@ namespace WorkFlowMySql.Data
                 ticket.Header = txtTicketHeader.Text;
             }
 
-            if(!string.IsNullOrEmpty(rtxtTicketContent.Text))
-            {
-                ticket.Content = rtxtTicketContent.Text;
-            }
+            
             ticket.Priority = cbPriority.SelectedItem.ToString();
             ticket.UserRegister = user.UserName;
             ticket.RegisterDate = DateTime.Now;

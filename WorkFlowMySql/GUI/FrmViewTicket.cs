@@ -43,5 +43,17 @@ namespace WorkFlowMySql.GUI
             else
                 dgTicketView.DataSource = ticketView.GetTicketListByUser(userName);
         }
+
+        private void dgTicketView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dgTicketView.Rows[index];
+            int ticketId = Convert.ToInt32(selectedRow.Cells[0].Value);
+        }
+
+        private void btnSolve_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

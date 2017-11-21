@@ -14,7 +14,6 @@ namespace WorkflowMVC.MapMethods
             return new TicketModel()
             {
                 Header = ticket.Header,
-                Content = ticket.Content,
                 Priority = ticket.Priority,
                 RegisterDate = ticket.RegisterDate,
                 UserRegister = ticket.UserRegister,
@@ -22,7 +21,7 @@ namespace WorkflowMVC.MapMethods
                 ActiveUser = ticket.ActiveUser,
                 Deadline = ticket.Deadline,
                 CloseDate = ticket.CloseDate,
-                Response = ticket.Response
+                Guid = ticket.Guid
             };
         }
 
@@ -34,7 +33,6 @@ namespace WorkflowMVC.MapMethods
                 ticketList.Add(new Ticket()
                 {
                     Header = ticketModel.Header,
-                    Content = ticketModel.Content,
                     Priority = ticketModel.Priority,
                     RegisterDate = ticketModel.RegisterDate,
                     UserRegister = ticketModel.UserRegister,
@@ -42,7 +40,7 @@ namespace WorkflowMVC.MapMethods
                     ActiveUser = ticketModel.ActiveUser,
                     Deadline = ticketModel.Deadline,
                     CloseDate = ticketModel.CloseDate,
-                    Response = ticketModel.Response
+                    Guid = ticketModel.Guid
                 });
             }
             return ticketList;

@@ -67,6 +67,7 @@
     <Compile Include="Data\FrmCreateTicket.Designer.cs">
       <DependentUpon>FrmCreateTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\TicketContent.cs" />
     <Compile Include="Data\TicketModel.cs" />
     <Compile Include="FrmRegisteration.cs">
       <SubType>Form</SubType>
@@ -101,6 +102,22 @@
     <Compile Include="Migrations\201711201713089_sad.cs" />
     <Compile Include="Migrations\201711201713089_sad.Designer.cs">
       <DependentUpon>201711201713089_sad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711212002390_sad1.cs" />
+    <Compile Include="Migrations\201711212002390_sad1.Designer.cs">
+      <DependentUpon>201711212002390_sad1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711212007068_a.cs" />
+    <Compile Include="Migrations\201711212007068_a.Designer.cs">
+      <DependentUpon>201711212007068_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711212010498_sdad.cs" />
+    <Compile Include="Migrations\201711212010498_sdad.Designer.cs">
+      <DependentUpon>201711212010498_sdad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711212013581_sadasa.cs" />
+    <Compile Include="Migrations\201711212013581_sadasa.Designer.cs">
+      <DependentUpon>201711212013581_sadasa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserModel.cs" />
@@ -139,6 +156,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711201713089_sad.resx">
       <DependentUpon>201711201713089_sad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711212002390_sad1.resx">
+      <DependentUpon>201711212002390_sad1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711212007068_a.resx">
+      <DependentUpon>201711212007068_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711212010498_sdad.resx">
+      <DependentUpon>201711212010498_sdad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711212013581_sadasa.resx">
+      <DependentUpon>201711212013581_sadasa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -18,7 +18,7 @@ namespace WorkflowMVC.Models
             public DateTime? CloseDate { get; set; }
             public string Priority { get; set; }
             public DateTime Deadline { get; set; }
-        public string Response { get; set; }
-        
+        public string Guid { get; set; }
+
     }
 }

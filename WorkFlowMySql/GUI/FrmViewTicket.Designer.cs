@@ -31,6 +31,7 @@
             this.dgTicketView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnSolve = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgTicketView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,9 +46,11 @@
             this.dgTicketView.Name = "dgTicketView";
             this.dgTicketView.Size = new System.Drawing.Size(936, 216);
             this.dgTicketView.TabIndex = 1;
+            this.dgTicketView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTicketView_CellClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSolve);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 222);
@@ -65,6 +68,16 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnSolve
+            // 
+            this.btnSolve.Location = new System.Drawing.Point(12, 27);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(75, 23);
+            this.btnSolve.TabIndex = 1;
+            this.btnSolve.Text = "Solve";
+            this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
             // FrmViewTicket
             // 
@@ -86,5 +99,6 @@
         private System.Windows.Forms.DataGridView dgTicketView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSolve;
     }
 }
