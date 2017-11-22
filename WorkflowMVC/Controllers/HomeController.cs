@@ -29,7 +29,7 @@ namespace WorkflowMVC.Controllers
             return View();
         }
         
-        public ActionResult TicketCreator(WebTicket ticket)
+        public ActionResult TicketCreator(WebTicketHeader ticket)
         {
             TicketBody ticketBodyContent= new TicketBody();
             ticketBodyContent.Content = ticket.Content;
@@ -48,7 +48,7 @@ namespace WorkflowMVC.Controllers
 
         public ActionResult TicketList()
         {
-            List<WebTicket> list = new List<WebTicket>();
+            List<WebTicketHeader> list = new List<WebTicketHeader>();
             list = mapper.MapTicketModelList2TicketList(ticketViewMethod.GetTicketList());
             return View(list);
         }
