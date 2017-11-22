@@ -21,7 +21,8 @@ namespace WorkflowMVC.MapMethods
                 ActiveUser = ticket.ActiveUser,
                 Deadline = ticket.Deadline,
                 CloseDate = ticket.CloseDate,
-                Guid = ticket.Guid
+                Guid = ticket.Guid,
+                Status = ticket.State
             };
         }
 
@@ -40,7 +41,8 @@ namespace WorkflowMVC.MapMethods
                     ActiveUser = ticketModel.ActiveUser,
                     Deadline = ticketModel.Deadline,
                     CloseDate = ticketModel.CloseDate,
-                    Guid = ticketModel.Guid
+                    Guid = ticketModel.Guid,
+                    State = ticketModel.Status
                 });
             }
             return ticketList;

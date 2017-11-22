@@ -16,6 +16,7 @@ namespace WorkFlowMySql.GUI
     {
         BindingList<TicketHeader> ticketList = new BindingList<TicketHeader>();
         TicketViewMethods ticketView = new TicketViewMethods();
+        private int ticketId = 0;
         private string userName;
 
         public FrmViewTicket()
@@ -48,12 +49,19 @@ namespace WorkFlowMySql.GUI
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dgTicketView.Rows[index];
-            int ticketId = Convert.ToInt32(selectedRow.Cells[0].Value);
+            ticketId = Convert.ToInt32(selectedRow.Cells[0].Value);
         }
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-
+            TicketBody selectedTicketBody = new TicketBody();
+            TicketHeader selecteTicketHeader = new TicketHeader();
+            selecteTicketHeader = ticketView.GeTicketHeaderById(ticketId);
+            
+            using (FrmSolveTicket frm = new FrmSolveTicket(selecteTicketHeader, selectedTicketBody))
+            {
+                frm.ShowDialog(this);
+            }
         }
     }
 }

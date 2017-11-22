@@ -34,6 +34,7 @@ namespace WorkFlowMySql.BLL
                     ticketHeader.Deadline = CalculateDeadline(ticketHeader.Priority);
                 
                 ticketHeader.Guid = guid;
+                ticketHeader.Status = "Active";
                 ticketBody.TicketGuid = guid;
                 context.Ticket.Add(ticketHeader);
                 context.TicketBody.Add(ticketBody);

@@ -19,6 +19,7 @@ namespace WorkflowMVC.Models
             public string Priority { get; set; }
             public DateTime Deadline { get; set; }
         public string Guid { get; set; }
+        public string State { get; set; }
 
     }
 }
