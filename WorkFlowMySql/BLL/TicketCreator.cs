@@ -36,6 +36,7 @@ namespace WorkFlowMySql.BLL
                 ticketHeader.Guid = guid;
                 ticketHeader.Status = "Active";
                 ticketBody.TicketGuid = guid;
+                ticketHeader.ActiveUser = ticketHeader.UserRegister;
                 context.Ticket.Add(ticketHeader);
                 context.TicketBody.Add(ticketBody);
                 context.EventLogContext.Add(log.CreatEventLog(ticketHeader, EventEnum.CreateTicket));

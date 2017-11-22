@@ -54,6 +54,11 @@ namespace WorkFlowMySql.GUI
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
+            if(ticketId == 0)
+            {
+                MessageBox.Show("Choose ticket from list");
+                return;
+            }
             TicketHeader selecteTicketHeader = new TicketHeader();
             selecteTicketHeader = ticketView.GeTicketHeaderById(ticketId);
             TicketBody selectedTicketBody = new TicketBody();

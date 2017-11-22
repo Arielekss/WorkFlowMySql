@@ -34,6 +34,17 @@ namespace WorkFlowMySql.GUI
         {
             base.OnLoad(e);
             LoadData();
+            PrepareForm();
+        }
+
+        private void PrepareForm()
+        {
+            if (ticketHeader.Status == "Cancel")
+            {
+                rTxtResponse.ReadOnly = true;
+                btnCloseTicket.Enabled = false;
+                    
+                    }
         }
 
         private void LoadData()
