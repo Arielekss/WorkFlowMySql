@@ -67,7 +67,7 @@
     <Compile Include="Data\FrmCreateTicket.Designer.cs">
       <DependentUpon>FrmCreateTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\TicketContent.cs" />
+    <Compile Include="Data\TicketBody.cs" />
     <Compile Include="Data\TicketModel.cs" />
     <Compile Include="FrmRegisteration.cs">
       <SubType>Form</SubType>

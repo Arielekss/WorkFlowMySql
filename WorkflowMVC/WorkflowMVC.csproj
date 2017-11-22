@@ -171,6 +171,7 @@
     </Compile>
     <Compile Include="MapMethods\ModelsMapper.cs" />
     <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\WebTicketContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

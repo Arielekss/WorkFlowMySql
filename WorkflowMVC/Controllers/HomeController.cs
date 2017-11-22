@@ -29,11 +29,13 @@ namespace WorkflowMVC.Controllers
             return View();
         }
         
-        public ActionResult TicketCreator(Ticket ticket)
+        public ActionResult TicketCreator(WebTicket ticket)
         {
+            TicketBody ticketBodyContent= new TicketBody();
+            ticketBodyContent.Content = ticket.Content;
             if (!string.IsNullOrEmpty(ticket.Header))
             {
-                ticketCreator.SendTicketToDb(mapper.MapTicket2TicketModel(ticket));
+                ticketCreator.SendTicketToDb(mapper.MapTicket2TicketModel(ticket), ticketBodyContent);
             }
                 
             ViewBag.Message = "Your application description page.";
@@ -46,7 +48,7 @@ namespace WorkflowMVC.Controllers
 
         public ActionResult TicketList()
         {
-            List<Ticket> list = new List<Ticket>();
+            List<WebTicket> list = new List<WebTicket>();
             list = mapper.MapTicketModelList2TicketList(ticketViewMethod.GetTicketList());
             return View(list);
         }

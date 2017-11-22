@@ -14,7 +14,8 @@ namespace WorkFlowMySql.Data
     public partial class FrmCreateTicket : Form
     {
         UserModel user;
-        TicketModel ticket = new TicketModel();
+        TicketModel ticketHeader = new TicketModel();
+        TicketBody ticketBody = new TicketBody();
         TicketCreator ticketCreator = new TicketCreator();
 
         private FrmCreateTicket()
@@ -38,21 +39,24 @@ namespace WorkFlowMySql.Data
                 return;
 
             CopyValueFromControls();
-            ticketCreator.SendTicketToDb(ticket);
+            ticketCreator.SendTicketToDb(ticketHeader, ticketBody);
         }
 
         private void CopyValueFromControls()
         {
             if(!string.IsNullOrEmpty(txtTicketHeader.Text))
             {
-                ticket.Header = txtTicketHeader.Text;
+                ticketHeader.Header = txtTicketHeader.Text;
             }
-
-            
-            ticket.Priority = cbPriority.SelectedItem.ToString();
-            ticket.UserRegister = user.UserName;
-            ticket.RegisterDate = DateTime.Now;
-            ticket.Deadline = ticketCreator.CalculateDeadline(ticket.Priority);
+            if (!string.IsNullOrEmpty(rtxtTicketContent.Text))
+            {
+                ticketBody.Content = rtxtTicketContent.Text;
+            }
+            ticketHeader.Priority = cbPriority.SelectedItem.ToString();
+            ticketHeader.UserRegister = user.UserName;
+            ticketHeader.RegisterDate = DateTime.Now;
+            ticketHeader.Deadline = ticketCreator.CalculateDeadline(ticketHeader.Priority);
+           
         }
         
     }

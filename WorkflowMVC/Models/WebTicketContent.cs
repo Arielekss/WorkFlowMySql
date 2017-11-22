@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace WorkFlowMySql.Data
+namespace WorkflowMVC.Models
 {
-    public class TicketContent
+    public class WebTicketContent
     {
-        [Key]
         public int Id { get; set; }
         public string TicketGuid { get; set; }
         public string Content { get; set; }

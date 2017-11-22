@@ -23,14 +23,18 @@ namespace WorkFlowMySql.BLL
 
             return deadline;
         }
-        public void SendTicketToDb( TicketModel ticketModel)
+        public void SendTicketToDb( TicketModel ticketHeader, TicketBody ticketBody)
         {
             using (var context = new WorkFlowContext())
             {
-                if(ticketModel.Priority == null)
-                ticketModel.Deadline = CalculateDeadline(ticketModel.Priority);
+                string guid = new Guid().ToString();
+                if(ticketHeader.Priority == null)
+                    ticketHeader.Deadline = CalculateDeadline(ticketHeader.Priority);
 
-                context.Ticket.Add(ticketModel);
+                ticketHeader.Guid = guid;
+                ticketBody.TicketGuid = guid;
+                context.Ticket.Add(ticketHeader);
+                context.TicketBody.Add(ticketBody);
                 context.SaveChanges();
             }
         }

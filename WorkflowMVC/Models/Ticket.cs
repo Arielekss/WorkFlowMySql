@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WorkflowMVC.Models
 {
-    public class Ticket
+    public class WebTicket
     {
             [Key]
             public int TicketId { get; set; }

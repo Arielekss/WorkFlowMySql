@@ -9,7 +9,7 @@ namespace WorkflowMVC.MapMethods
 {
     public class ModelsMapper
     {
-        public TicketModel MapTicket2TicketModel(Ticket ticket)
+        public TicketModel MapTicket2TicketModel(WebTicket ticket)
         {
             return new TicketModel()
             {
@@ -25,12 +25,12 @@ namespace WorkflowMVC.MapMethods
             };
         }
 
-        public List<Ticket> MapTicketModelList2TicketList(List<TicketModel> ticket)
+        public List<WebTicket> MapTicketModelList2TicketList(List<TicketModel> ticket)
         {
-            List<Ticket> ticketList = new List<Ticket>();
+            List<WebTicket> ticketList = new List<WebTicket>();
             foreach (TicketModel ticketModel in ticket)
             {
-                ticketList.Add(new Ticket()
+                ticketList.Add(new WebTicket()
                 {
                     Header = ticketModel.Header,
                     Priority = ticketModel.Priority,
@@ -44,6 +44,28 @@ namespace WorkflowMVC.MapMethods
                 });
             }
             return ticketList;
+        }
+
+        public WebTicketContent MapWebTicketContent2TicketModelContent(TicketBody ticketBody)
+        {
+            return new WebTicketContent()
+            {
+                TicketGuid = ticketBody.TicketGuid,
+                Response = ticketBody.Response,
+                Id = ticketBody.Id,
+                Content = ticketBody.Content
+            };
+        }
+
+        public TicketBody MapTicketBody2WebTicketContent(WebTicketContent webTicketContent)
+        {
+            return new TicketBody()
+            {
+                TicketGuid = webTicketContent.TicketGuid,
+                Response = webTicketContent.Response,
+                Id = webTicketContent.Id,
+                Content = webTicketContent.Content
+            };
         }
     }
 }
