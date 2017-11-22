@@ -29,8 +29,8 @@ namespace WorkFlowMySql.BLL
         {
             using (var context = new WorkFlowContext())
             {
-                string guid = new Guid().ToString();
-                if(ticketHeader.Priority == null)
+                string guid = Guid.NewGuid().ToString();
+                if (ticketHeader.Priority == null)
                     ticketHeader.Deadline = CalculateDeadline(ticketHeader.Priority);
                 
                 ticketHeader.Guid = guid;

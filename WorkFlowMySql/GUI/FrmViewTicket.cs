@@ -54,9 +54,11 @@ namespace WorkFlowMySql.GUI
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            TicketBody selectedTicketBody = new TicketBody();
             TicketHeader selecteTicketHeader = new TicketHeader();
             selecteTicketHeader = ticketView.GeTicketHeaderById(ticketId);
+            TicketBody selectedTicketBody = new TicketBody();
+            selectedTicketBody = ticketView.GeTicketBodyById(selecteTicketHeader.Guid);
+            
             
             using (FrmSolveTicket frm = new FrmSolveTicket(selecteTicketHeader, selectedTicketBody))
             {

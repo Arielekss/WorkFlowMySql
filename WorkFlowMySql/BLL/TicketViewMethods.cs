@@ -32,5 +32,13 @@ namespace WorkFlowMySql.BLL
                 return context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
             }
         }
+
+        public TicketBody GeTicketBodyById(string guid)
+        {
+            using (var context = new WorkFlowContext())
+            {
+                return context.TicketBody.Where(s => s.TicketGuid == guid).ToList().FirstOrDefault();
+            }
+        }
     }
 }
