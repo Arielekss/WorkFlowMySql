@@ -63,6 +63,7 @@ namespace WorkFlowMySql.GUI
             using (FrmSolveTicket frm = new FrmSolveTicket(selecteTicketHeader, selectedTicketBody))
             {
                 frm.ShowDialog(this);
+                RefreshList();
             }
         }
     }

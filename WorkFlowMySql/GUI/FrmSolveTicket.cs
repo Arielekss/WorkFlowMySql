@@ -51,6 +51,8 @@ namespace WorkFlowMySql.GUI
             if (dialogResult == DialogResult.Yes)
             {
                 serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Cancel");
+                ticketHeader.Status = "Cancel";
+                LoadData();
             }
             else if (dialogResult == DialogResult.No)
             {

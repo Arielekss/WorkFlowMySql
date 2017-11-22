@@ -15,7 +15,9 @@ namespace WorkFlowMySql.BLL
             {
                var ticket = context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
                 ticket.Status = ticketStatus;
+                ticket.CloseDate = DateTime.Now;
                 context.Ticket.AddOrUpdate(ticket);
+                context.SaveChanges();
             }
         }
     }

@@ -30,8 +30,8 @@
         {
             this.dgTicketView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgTicketView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,9 @@
             this.dgTicketView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTicketView.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgTicketView.Location = new System.Drawing.Point(0, 0);
+            this.dgTicketView.MultiSelect = false;
             this.dgTicketView.Name = "dgTicketView";
+            this.dgTicketView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgTicketView.Size = new System.Drawing.Size(936, 216);
             this.dgTicketView.TabIndex = 1;
             this.dgTicketView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTicketView_CellClick);
@@ -58,6 +60,16 @@
             this.panel1.Size = new System.Drawing.Size(936, 62);
             this.panel1.TabIndex = 2;
             // 
+            // btnSolve
+            // 
+            this.btnSolve.Location = new System.Drawing.Point(12, 27);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(75, 23);
+            this.btnSolve.TabIndex = 1;
+            this.btnSolve.Text = "Solve";
+            this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -68,16 +80,6 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnSolve
-            // 
-            this.btnSolve.Location = new System.Drawing.Point(12, 27);
-            this.btnSolve.Name = "btnSolve";
-            this.btnSolve.Size = new System.Drawing.Size(75, 23);
-            this.btnSolve.TabIndex = 1;
-            this.btnSolve.Text = "Solve";
-            this.btnSolve.UseVisualStyleBackColor = true;
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
             // FrmViewTicket
             // 
