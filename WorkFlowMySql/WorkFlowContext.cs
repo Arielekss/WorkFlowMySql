@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorkFlowMySql.Data;
+using WorkFlowMySql.GUI;
 using WorkFlowMySql.Migrations;
 
 namespace WorkFlowMySql
@@ -15,7 +16,7 @@ namespace WorkFlowMySql
         public WorkFlowContext() : base(nameOrConnectionString: "WorkFlowContext") { }
 
         public DbSet<UserModel> Customer { get; set; }
-        public DbSet<TicketModel> Ticket { get; set; }
+        public DbSet<TicketHeader> Ticket { get; set; }
         public DbSet<TicketBody> TicketBody { get; set; }
       
     }

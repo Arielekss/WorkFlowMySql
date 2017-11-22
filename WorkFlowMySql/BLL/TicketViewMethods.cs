@@ -7,9 +7,9 @@ using WorkFlowMySql.Data;
 
 namespace WorkFlowMySql.BLL
 {
-    public class TicketViewModel
+    public class TicketViewMethods
     {
-        public List<TicketModel> GetTicketList()
+        public List<TicketHeader> GetTicketList()
         {
             using (var context = new WorkFlowContext())
             {
@@ -17,7 +17,7 @@ namespace WorkFlowMySql.BLL
             }
         }
 
-        public List<TicketModel> GetTicketListByUser(string user)
+        public List<TicketHeader> GetTicketListByUser(string user)
         {
             using (var context = new WorkFlowContext())
             {

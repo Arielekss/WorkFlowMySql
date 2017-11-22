@@ -23,7 +23,7 @@ namespace WorkFlowMySql.BLL
 
             return deadline;
         }
-        public void SendTicketToDb( TicketModel ticketHeader, TicketBody ticketBody)
+        public void SendTicketToDb( TicketHeader ticketHeader, TicketBody ticketBody)
         {
             using (var context = new WorkFlowContext())
             {

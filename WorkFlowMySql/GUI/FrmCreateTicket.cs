@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkFlowMySql.BLL;
+using WorkFlowMySql.Data;
 
-namespace WorkFlowMySql.Data
+namespace WorkFlowMySql.GUI
 {
     public partial class FrmCreateTicket : Form
     {
         UserModel user;
-        TicketModel ticketHeader = new TicketModel();
+        TicketHeader ticketHeader = new TicketHeader();
         TicketBody ticketBody = new TicketBody();
         TicketCreator ticketCreator = new TicketCreator();
 

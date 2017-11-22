@@ -1,4 +1,4 @@
-﻿namespace WorkFlowMySql
+﻿namespace WorkFlowMySql.GUI
 {
     partial class FrmRegisteration
     {

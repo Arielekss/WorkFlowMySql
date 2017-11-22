@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WorkFlowMySql.Data
 {
-    public class TicketModel
+    public class TicketHeader
     {
         [Key]
         public int TicketId { get; set; }

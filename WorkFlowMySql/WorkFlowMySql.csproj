@@ -60,19 +60,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\TicketCreator.cs" />
-    <Compile Include="BLL\TicketViewModel.cs" />
-    <Compile Include="Data\FrmCreateTicket.cs">
+    <Compile Include="BLL\TicketViewMethods.cs" />
+    <Compile Include="GUI\FrmCreateTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\FrmCreateTicket.Designer.cs">
+    <Compile Include="GUI\FrmCreateTicket.Designer.cs">
       <DependentUpon>FrmCreateTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\TicketBody.cs" />
-    <Compile Include="Data\TicketModel.cs" />
-    <Compile Include="FrmRegisteration.cs">
+    <Compile Include="Data\TicketHeader.cs" />
+    <Compile Include="GUI\FrmRegisteration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegisteration.Designer.cs">
+    <Compile Include="GUI\FrmRegisteration.Designer.cs">
       <DependentUpon>FrmRegisteration.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmUserMenu.cs">
@@ -120,23 +120,23 @@
       <DependentUpon>201711212013581_sadasa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="UserModel.cs" />
+    <Compile Include="Data\UserModel.cs" />
     <Compile Include="WorkFlowContext.cs" />
-    <Compile Include="FrmLoginMenu.cs">
+    <Compile Include="GUI\FrmLoginMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLoginMenu.Designer.cs">
+    <Compile Include="GUI\FrmLoginMenu.Designer.cs">
       <DependentUpon>FrmLoginMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Data\FrmCreateTicket.resx">
+    <EmbeddedResource Include="GUI\FrmCreateTicket.resx">
       <DependentUpon>FrmCreateTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLoginMenu.resx">
+    <EmbeddedResource Include="GUI\FrmLoginMenu.resx">
       <DependentUpon>FrmLoginMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegisteration.resx">
+    <EmbeddedResource Include="GUI\FrmRegisteration.resx">
       <DependentUpon>FrmRegisteration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmUserMenu.resx">

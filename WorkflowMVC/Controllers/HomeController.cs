@@ -13,9 +13,9 @@ namespace WorkflowMVC.Controllers
 {
     public class HomeController : Controller
     {
-        TicketModel ticketModel = new TicketModel();
+        TicketHeader ticketModel = new TicketHeader();
         private ModelsMapper mapper = new ModelsMapper();
-        private TicketViewModel ticketViewMethod = new TicketViewModel();
+        private TicketViewMethods ticketViewMethod = new TicketViewMethods();
         WorkFlowMySql.BLL.TicketCreator ticketCreator = new TicketCreator();
         public ActionResult Index()
         {

@@ -9,9 +9,9 @@ namespace WorkflowMVC.MapMethods
 {
     public class ModelsMapper
     {
-        public TicketModel MapTicket2TicketModel(WebTicketHeader ticket)
+        public TicketHeader MapTicket2TicketModel(WebTicketHeader ticket)
         {
-            return new TicketModel()
+            return new TicketHeader()
             {
                 Header = ticket.Header,
                 Priority = ticket.Priority,
@@ -22,13 +22,13 @@ namespace WorkflowMVC.MapMethods
                 Deadline = ticket.Deadline,
                 CloseDate = ticket.CloseDate,
                 Guid = ticket.Guid
-            }
+            };
         }
 
-        public List<WebTicketHeader> MapTicketModelList2TicketList(List<TicketModel> ticket)
+        public List<WebTicketHeader> MapTicketModelList2TicketList(List<TicketHeader> ticket)
         {
             List<WebTicketHeader> ticketList = new List<WebTicketHeader>();
-            foreach (TicketModel ticketModel in ticket)
+            foreach (TicketHeader ticketModel in ticket)
             {
                 ticketList.Add(new WebTicketHeader()
                 {

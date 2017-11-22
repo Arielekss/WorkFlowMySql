@@ -14,8 +14,8 @@ namespace WorkFlowMySql.GUI
 {
     public partial class FrmViewTicket : Form
     {
-        BindingList<TicketModel> ticketList = new BindingList<TicketModel>();
-        TicketViewModel ticketView = new TicketViewModel();
+        BindingList<TicketHeader> ticketList = new BindingList<TicketHeader>();
+        TicketViewMethods ticketView = new TicketViewMethods();
         private string userName;
 
         public FrmViewTicket()

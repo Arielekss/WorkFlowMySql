@@ -1,4 +1,4 @@
-﻿namespace WorkFlowMySql.Data
+﻿namespace WorkFlowMySql.GUI
 {
     partial class FrmCreateTicket
     {

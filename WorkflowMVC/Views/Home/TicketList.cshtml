@@ -1,7 +1,7 @@
 ﻿
 
 @using WorkflowMVC.Models
-@model List<WorkflowMVC.Models.WebTicket>
+@model List<WorkflowMVC.Models.WebTicketHeader>
 
 @{
     ViewBag.Title = "TicketList";
@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                     
-            @foreach (WebTicket ticket in Model)
+            @foreach (WebTicketHeader ticket in Model)
             {
                  <tr>
                     <td>@ticket.TicketId</td>

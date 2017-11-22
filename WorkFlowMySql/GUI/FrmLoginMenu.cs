@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkFlowMySql.GUI;
 
-namespace WorkFlowMySql
+namespace WorkFlowMySql.GUI
 {
     public partial class FrmLoginMenu : Form
     {
