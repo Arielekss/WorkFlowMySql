@@ -102,6 +102,10 @@
     <Compile Include="Migrations\201711221641558_adsadas.Designer.cs">
       <DependentUpon>201711221641558_adsadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711221743281_asdsassa.cs" />
+    <Compile Include="Migrations\201711221743281_asdsassa.Designer.cs">
+      <DependentUpon>201711221743281_asdsassa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WorkFlowContext.cs" />
     <Compile Include="GUI\FrmLoginMenu.cs">
@@ -132,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221641558_adsadas.resx">
       <DependentUpon>201711221641558_adsadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221743281_asdsassa.resx">
+      <DependentUpon>201711221743281_asdsassa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

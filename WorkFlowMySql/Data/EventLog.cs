@@ -11,7 +11,7 @@ namespace WorkFlowMySql.Data
     {
         [Key]
         public int EventId { get; set; }
-        public int TicketId { get; set; }
+        public string Guid { get; set; }
         public string EventType { get; set; }
         public DateTime EvenDate { get; set; }
         public string User { get; set; }

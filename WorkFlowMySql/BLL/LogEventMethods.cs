@@ -36,7 +36,7 @@ namespace WorkFlowMySql.BLL
             }
             return new EventLog()
             {
-                TicketId = ticketHeader.TicketId,
+                Guid = ticketHeader.Guid,
                 EvenDate = DateTime.Now,
                 User = ticketHeader.UserRegister,
                 EventType = eventType
