@@ -145,6 +145,7 @@
             this.btnTicketCancel.TabIndex = 4;
             this.btnTicketCancel.Text = "Cancel Ticket";
             this.btnTicketCancel.UseVisualStyleBackColor = true;
+            this.btnTicketCancel.Click += new System.EventHandler(this.btnTicketCancel_Click);
             // 
             // txtActiveUser
             // 

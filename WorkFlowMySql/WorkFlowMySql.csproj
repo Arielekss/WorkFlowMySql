@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="BLL\LogEventMethods.cs" />
     <Compile Include="BLL\TicketCreator.cs" />
+    <Compile Include="BLL\TicketServiceMethods.cs" />
     <Compile Include="BLL\TicketViewMethods.cs" />
     <Compile Include="Data\Enums\EventEnum.cs" />
     <Compile Include="Data\EventLog.cs" />

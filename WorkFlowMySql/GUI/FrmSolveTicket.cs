@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkFlowMySql.BLL;
 using WorkFlowMySql.Data;
 
 namespace WorkFlowMySql.GUI
@@ -15,6 +16,7 @@ namespace WorkFlowMySql.GUI
     {
         private TicketHeader ticketHeader;
         private TicketBody ticketBody;
+        private TicketServiceMethods serviceMethods = new TicketServiceMethods();
 
         private FrmSolveTicket()
         {
@@ -40,6 +42,20 @@ namespace WorkFlowMySql.GUI
             txtActiveUser.Text = ticketHeader.ActiveUser;
             rTxtContent.Text = ticketBody.Content;
             txtStatus.Text = ticketHeader.Status;
+        }
+
+        private void btnTicketCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to cancel the ticket?", "Cancelation",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Cancel");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }
