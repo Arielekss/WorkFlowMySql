@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WorkFlowMySql.Data;
 using WorkFlowMySql.GUI;
-using WorkFlowMySql.Migrations;
 
 namespace WorkFlowMySql
 {

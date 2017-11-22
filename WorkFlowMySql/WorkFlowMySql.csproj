@@ -97,40 +97,12 @@
     <Compile Include="GUI\FrmViewTicket.Designer.cs">
       <DependentUpon>FrmViewTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710132241128_initial.cs" />
-    <Compile Include="Migrations\201710132241128_initial.Designer.cs">
-      <DependentUpon>201710132241128_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710150818167_2.cs" />
-    <Compile Include="Migrations\201710150818167_2.Designer.cs">
-      <DependentUpon>201710150818167_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710211127495_AddTicket.cs" />
-    <Compile Include="Migrations\201710211127495_AddTicket.Designer.cs">
-      <DependentUpon>201710211127495_AddTicket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711201713089_sad.cs" />
-    <Compile Include="Migrations\201711201713089_sad.Designer.cs">
-      <DependentUpon>201711201713089_sad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711212002390_sad1.cs" />
-    <Compile Include="Migrations\201711212002390_sad1.Designer.cs">
-      <DependentUpon>201711212002390_sad1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711212007068_a.cs" />
-    <Compile Include="Migrations\201711212007068_a.Designer.cs">
-      <DependentUpon>201711212007068_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711212010498_sdad.cs" />
-    <Compile Include="Migrations\201711212010498_sdad.Designer.cs">
-      <DependentUpon>201711212010498_sdad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711212013581_sadasa.cs" />
-    <Compile Include="Migrations\201711212013581_sadasa.Designer.cs">
-      <DependentUpon>201711212013581_sadasa.cs</DependentUpon>
+    <Compile Include="Data\UserModel.cs" />
+    <Compile Include="Migrations\201711221641558_adsadas.cs" />
+    <Compile Include="Migrations\201711221641558_adsadas.Designer.cs">
+      <DependentUpon>201711221641558_adsadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Data\UserModel.cs" />
     <Compile Include="WorkFlowContext.cs" />
     <Compile Include="GUI\FrmLoginMenu.cs">
       <SubType>Form</SubType>
@@ -158,29 +130,8 @@
     <EmbeddedResource Include="GUI\FrmViewTicket.resx">
       <DependentUpon>FrmViewTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710132241128_initial.resx">
-      <DependentUpon>201710132241128_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710150818167_2.resx">
-      <DependentUpon>201710150818167_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710211127495_AddTicket.resx">
-      <DependentUpon>201710211127495_AddTicket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711201713089_sad.resx">
-      <DependentUpon>201711201713089_sad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711212002390_sad1.resx">
-      <DependentUpon>201711212002390_sad1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711212007068_a.resx">
-      <DependentUpon>201711212007068_a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711212010498_sdad.resx">
-      <DependentUpon>201711212010498_sdad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711212013581_sadasa.resx">
-      <DependentUpon>201711212013581_sadasa.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711221641558_adsadas.resx">
+      <DependentUpon>201711221641558_adsadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
