@@ -59,8 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\LogEventMethods.cs" />
     <Compile Include="BLL\TicketCreator.cs" />
     <Compile Include="BLL\TicketViewMethods.cs" />
+    <Compile Include="Data\Enums\EventEnum.cs" />
+    <Compile Include="Data\EventLog.cs" />
     <Compile Include="GUI\FrmCreateTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +77,12 @@
     </Compile>
     <Compile Include="GUI\FrmRegisteration.Designer.cs">
       <DependentUpon>FrmRegisteration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmSolveTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmSolveTicket.Designer.cs">
+      <DependentUpon>FrmSolveTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmUserMenu.cs">
       <SubType>Form</SubType>
@@ -138,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmRegisteration.resx">
       <DependentUpon>FrmRegisteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmSolveTicket.resx">
+      <DependentUpon>FrmSolveTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmUserMenu.resx">
       <DependentUpon>FrmUserMenu.cs</DependentUpon>

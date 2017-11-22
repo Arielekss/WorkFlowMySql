@@ -18,7 +18,7 @@ namespace WorkFlowMySql
         public DbSet<UserModel> Customer { get; set; }
         public DbSet<TicketHeader> Ticket { get; set; }
         public DbSet<TicketBody> TicketBody { get; set; }
-      
+        public DbSet<EventLog> EventLogContext { get; set; }
     }
 
 
