@@ -12,7 +12,7 @@ namespace WorkFlowMySql.BLL
     public class TicketServiceMethods
     {
         LogEventMethods log = new LogEventMethods();
-        public void UpdateTicketStatusById(int ticketId, string ticketStatus)
+        public void UpdateTicketStatusById(int ticketId, string ticketStatus, string response)
         {
             using (var context = new WorkFlowContext())
             {
@@ -21,14 +21,22 @@ namespace WorkFlowMySql.BLL
                 ticket.CloseDate = DateTime.Now;
                 context.Ticket.AddOrUpdate(ticket);
 
-                if(ticketStatus == "Cancel")
-                log.CreatEventLog(ticket, EventEnum.CancelTicket);
+                if (ticketStatus == "Cancel")
+                    context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CancelTicket));
 
-                else if(ticketStatus == "Close")
-                    log.CreatEventLog(ticket, EventEnum.CloseTicket);
-
+                else if (ticketStatus == "Close")
+                {
+                    var ticketBody = context.TicketBody.Where(s => s.TicketGuid == ticket.Guid).ToList().FirstOrDefault();
+                    ticketBody.Response = response;
+                    context.TicketBody.AddOrUpdate(ticketBody);
+                    context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CloseTicket));
+                }
                 context.SaveChanges();
             }
+        }
+        public void UpdateTicketResponseById()
+        {
+
         }
     }
 }

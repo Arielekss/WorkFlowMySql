@@ -50,7 +50,7 @@ namespace WorkFlowMySql.GUI
                 MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Cancel");
+                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Cancel", null);
                 ticketHeader.Status = "Cancel";
                 LoadData();
             }
@@ -79,16 +79,25 @@ namespace WorkFlowMySql.GUI
             {
                 return;
             }
-
+            CopyValueFromControls();
             if (dialogResult == DialogResult.Yes)
             {
-                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Close");
+                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Close", ticketBody.Response);
                 ticketHeader.Status = "Close";
+
                 LoadData();
             }
             else if (dialogResult == DialogResult.No)
             {
                 return;
+            }
+        }
+
+        private void CopyValueFromControls()
+        {
+            if(!string.IsNullOrEmpty(rTxtResponse.Text))
+            {
+                ticketBody.Response = rTxtResponse.Text;
             }
         }
     }
