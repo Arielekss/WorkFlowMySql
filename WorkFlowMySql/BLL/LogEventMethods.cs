@@ -13,32 +13,39 @@ namespace WorkFlowMySql.BLL
         public EventLog CreatEventLog(TicketHeader ticketHeader, EventEnum eventEnum)
         {
             string eventType = null;
+            string user = null;
             switch (eventEnum)
             {
                 case EventEnum.CreateTicket:
                     eventType = "CreateTicket";
+                    user = ticketHeader.UserRegister;
                     break;
                 case EventEnum.CancelTicket:
                     eventType = "CancelTicket";
+                    user = ticketHeader.ActiveUser;
                     break;
                 case EventEnum.AddComment:
                     eventType = "AddComment";
+                    user = ticketHeader.ActiveUser;
                     break;
                 case EventEnum.CloseTicket:
                     eventType = "CloseTicket";
+                    user = ticketHeader.ActiveUser;
                     break;
                 case EventEnum.MoveToNextUser:
                     eventType = "MoveToNextUser";
+                    user = ticketHeader.ActiveUser;
                     break;
                 default:
                     eventType = "Unknown";
+                    user = ticketHeader.ActiveUser;
                     break;
             }
             return new EventLog()
             {
                 Guid = ticketHeader.Guid,
                 EvenDate = DateTime.Now,
-                User = ticketHeader.UserRegister,
+                User = user,
                 EventType = eventType
             };
         }

@@ -34,6 +34,15 @@ namespace WorkFlowMySql.GUI
         {
             base.OnLoad(e);
             RefreshList();
+            PrepareControls();
+        }
+
+        private void PrepareControls()
+        {
+            if (userName == null)
+            {
+                btnSolve.Enabled = false;
+            }
         }
 
         private void RefreshList()
