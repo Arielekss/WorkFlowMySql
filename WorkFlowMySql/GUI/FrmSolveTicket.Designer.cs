@@ -136,6 +136,7 @@
             this.btnCloseTicket.TabIndex = 3;
             this.btnCloseTicket.Text = "Close Ticket";
             this.btnCloseTicket.UseVisualStyleBackColor = true;
+            this.btnCloseTicket.Click += new System.EventHandler(this.btnCloseTicket_Click);
             // 
             // btnTicketCancel
             // 

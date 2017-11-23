@@ -59,5 +59,37 @@ namespace WorkFlowMySql.GUI
                 return;
             }
         }
+
+        private bool ValidateResponse()
+        {
+            if (string.IsNullOrEmpty(rTxtResponse.Text))
+            {
+                MessageBox.Show("Please enter the response");
+                return false;
+            }
+            return true;
+        }
+
+        private void btnCloseTicket_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to close the ticket and send respond?", "Close Ticket",
+                MessageBoxButtons.YesNo);
+
+            if (!ValidateResponse())
+            {
+                return;
+            }
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Close");
+                ticketHeader.Status = "Close";
+                LoadData();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
     }
 }
