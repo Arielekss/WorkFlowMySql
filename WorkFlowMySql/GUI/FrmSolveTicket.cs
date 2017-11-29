@@ -84,7 +84,6 @@ namespace WorkFlowMySql.GUI
             {
                 serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Close", ticketBody.Response);
                 ticketHeader.Status = "Close";
-
                 LoadData();
             }
             else if (dialogResult == DialogResult.No)
@@ -101,22 +100,21 @@ namespace WorkFlowMySql.GUI
             }
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+        }
+
         private void llblForward_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             using (FrmUserPickingList frm = new FrmUserPickingList())
             {
                 frm.ShowDialog(this);
-                if (DialogResult == DialogResult.OK)
+                if (frm.DialogResult == DialogResult.OK)
                 {
-                    /*TODO: dorobić proces przekazania zadania 
-                 - komentarze
-                 - zamknięcie solved
-                 - wymaga komentarza
-                    */
-
                     serviceMethods.MoveTicketToAnotherUser(ticketHeader,frm.selectedUser);
-                    serviceMethods.AddComment(ticketHeader, comment);
-
+                    serviceMethods.AddComment(ticketHeader, frm.comment);
+                    //TODO: dorobić zamknięcie
                 }
             }
         }

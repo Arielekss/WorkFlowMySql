@@ -15,7 +15,7 @@ namespace WorkFlowMySql.GUI
     {
         UserMethods user = new UserMethods();
         public UserModel selectedUser = new UserModel();
-        string comment = String.Empty;
+        public string comment = String.Empty;
         public FrmUserPickingList()
         {
             InitializeComponent();
@@ -38,8 +38,8 @@ namespace WorkFlowMySql.GUI
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
-            CopyCommentFromControls();
-            if (DialogResult != DialogResult.OK || !CopyCommentFromControls())
+            bool corectValues = CopyCommentFromControls();
+            if (DialogResult != DialogResult.OK || !corectValues)
             {
                 return;
             }
