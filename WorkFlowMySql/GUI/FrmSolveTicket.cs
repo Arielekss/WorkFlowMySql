@@ -100,5 +100,25 @@ namespace WorkFlowMySql.GUI
                 ticketBody.Response = rTxtResponse.Text;
             }
         }
+
+        private void llblForward_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using (FrmUserPickingList frm = new FrmUserPickingList())
+            {
+                frm.ShowDialog(this);
+                if (DialogResult == DialogResult.OK)
+                {
+                    /*TODO: dorobić proces przekazania zadania 
+                 - komentarze
+                 - zamknięcie solved
+                 - wymaga komentarza
+                    */
+
+                    serviceMethods.MoveTicketToAnotherUser(ticketHeader,frm.selectedUser);
+                    serviceMethods.AddComment(ticketHeader, comment);
+
+                }
+            }
+        }
     }
 }

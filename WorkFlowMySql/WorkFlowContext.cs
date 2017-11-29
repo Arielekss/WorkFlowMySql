@@ -18,6 +18,7 @@ namespace WorkFlowMySql
         public DbSet<TicketHeader> Ticket { get; set; }
         public DbSet<TicketBody> TicketBody { get; set; }
         public DbSet<EventLog> EventLogContext { get; set; }
+        public DbSet<Commentary> CommentaryContext { get; set; }
     }
 
 

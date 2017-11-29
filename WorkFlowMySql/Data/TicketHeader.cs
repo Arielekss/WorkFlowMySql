@@ -20,5 +20,6 @@ namespace WorkFlowMySql.Data
         public DateTime Deadline { get; set; }
         public string Guid { get; set; }
         public string Status { get; set; }
+        public int ActiveUserId { get; set; }
     }
 }

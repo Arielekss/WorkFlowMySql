@@ -200,6 +200,7 @@
             this.llblForward.TabIndex = 10;
             this.llblForward.TabStop = true;
             this.llblForward.Text = "Forward";
+            this.llblForward.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblForward_LinkClicked);
             // 
             // FrmSolveTicket
             // 

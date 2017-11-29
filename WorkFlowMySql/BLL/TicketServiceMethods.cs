@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WorkFlowMySql.Data;
 using WorkFlowMySql.Data.Enums;
+using WorkFlowMySql.GUI;
 
 namespace WorkFlowMySql.BLL
 {
@@ -36,7 +37,38 @@ namespace WorkFlowMySql.BLL
         }
         public void UpdateTicketResponseById()
         {
-
+            //TODO:
         }
+
+        public void MoveTicketToAnotherUser(TicketHeader ticketHeader ,UserModel selectedUser)
+        {
+            using (var context = new WorkFlowContext())
+            {
+                var ticket = context.Ticket.Where(s => s.TicketId == ticketHeader.TicketId).ToList().FirstOrDefault();
+                ticket.ActiveUserId = selectedUser.UserId;
+                ticket.ActiveUser = selectedUser.UserName;
+                context.Ticket.AddOrUpdate(ticket);
+                context.EventLogContext.Add(log.CreatEventLog(ticketHeader, EventEnum.MoveToNextUser));
+                context.SaveChanges();
+            }
+        }
+
+        public void AddComment(TicketHeader ticketHeader, string commentContent)
+        {
+            using (var context = new WorkFlowContext())
+            {
+                Commentary comment = new Commentary
+                {
+                    UserId = ticketHeader.ActiveUserId,
+                    CommentaryContent = commentContent,
+                    CommentaryDate = DateTime.Now,
+                    TicketGuid = ticketHeader.Guid
+                };
+                context.CommentaryContext.Add(comment);
+                context.EventLogContext.Add(log.CreatEventLog(ticketHeader, EventEnum.AddComment));
+                context.SaveChanges();
+            }
+        }
+
     }
 }

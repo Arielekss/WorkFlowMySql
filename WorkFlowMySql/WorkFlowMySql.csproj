@@ -63,6 +63,8 @@
     <Compile Include="BLL\TicketCreator.cs" />
     <Compile Include="BLL\TicketServiceMethods.cs" />
     <Compile Include="BLL\TicketViewMethods.cs" />
+    <Compile Include="BLL\UserMethods.cs" />
+    <Compile Include="Data\Commentary.cs" />
     <Compile Include="Data\Enums\EventEnum.cs" />
     <Compile Include="Data\EventLog.cs" />
     <Compile Include="GUI\FrmCreateTicket.cs">
@@ -90,6 +92,12 @@
     </Compile>
     <Compile Include="GUI\FrmUserMenu.Designer.cs">
       <DependentUpon>FrmUserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmUserPickingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmUserPickingList.Designer.cs">
+      <DependentUpon>FrmUserPickingList.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmViewTicket.cs">
       <SubType>Form</SubType>
@@ -130,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmUserMenu.resx">
       <DependentUpon>FrmUserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmUserPickingList.resx">
+      <DependentUpon>FrmUserPickingList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmViewTicket.resx">
       <DependentUpon>FrmViewTicket.cs</DependentUpon>

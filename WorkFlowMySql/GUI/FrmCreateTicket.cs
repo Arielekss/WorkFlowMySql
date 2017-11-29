@@ -55,6 +55,7 @@ namespace WorkFlowMySql.GUI
             }
             ticketHeader.Priority = cbPriority.SelectedItem.ToString();
             ticketHeader.UserRegister = user.UserName;
+            ticketHeader.ActiveUserId = user.UserId;
             ticketHeader.RegisterDate = DateTime.Now;
             ticketHeader.Deadline = ticketCreator.CalculateDeadline(ticketHeader.Priority);
            
