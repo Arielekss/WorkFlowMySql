@@ -4,16 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkFlowMySql.BLL;
 
 namespace WorkFlowMySql.GUI
 {
     public partial class FrmRegisteration : Form
     {
         private UserModel user = new UserModel();
-        
+        UserMethods userMethods = new UserMethods();
 
         public FrmRegisteration()
         {
@@ -43,7 +45,7 @@ namespace WorkFlowMySql.GUI
                 {
                     context.Customer.Add(new UserModel
                     {
-                        Pass = txtPass.Text,
+                        Pass = userMethods.HashPassword(txtPass.Text),
                         UserName = txtUserName.Text,
                         UserType = cbUserType.SelectedItem.ToString()
                     });

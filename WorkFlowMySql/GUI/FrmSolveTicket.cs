@@ -44,10 +44,35 @@ namespace WorkFlowMySql.GUI
             txtStatus.Text = ticketHeader.Status;
         }
 
-        private void btnTicketCancel_Click(object sender, EventArgs e)
+        private bool ValidateResponse()
+        {
+            if (string.IsNullOrEmpty(rTxtResponse.Text))
+            {
+                MessageBox.Show("Please enter the response");
+                return false;
+            }
+            return true;
+        }
+        
+
+        private void CopyValueFromControls()
+        {
+            if(!string.IsNullOrEmpty(rTxtResponse.Text))
+            {
+                ticketBody.Response = rTxtResponse.Text;
+            }
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+        }
+        
+
+        private void btnTicketCancel_Click_1(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to cancel the ticket?", "Cancelation",
-                MessageBoxButtons.YesNo);
+               MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 serviceMethods.UpdateTicketStatusById(ticketHeader.TicketId, "Cancel", null);
@@ -60,17 +85,7 @@ namespace WorkFlowMySql.GUI
             }
         }
 
-        private bool ValidateResponse()
-        {
-            if (string.IsNullOrEmpty(rTxtResponse.Text))
-            {
-                MessageBox.Show("Please enter the response");
-                return false;
-            }
-            return true;
-        }
-
-        private void btnCloseTicket_Click(object sender, EventArgs e)
+        private void btnCloseTicket_Click_1(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to close the ticket and send respond?", "Close Ticket",
                 MessageBoxButtons.YesNo);
@@ -92,27 +107,14 @@ namespace WorkFlowMySql.GUI
             }
         }
 
-        private void CopyValueFromControls()
-        {
-            if(!string.IsNullOrEmpty(rTxtResponse.Text))
-            {
-                ticketBody.Response = rTxtResponse.Text;
-            }
-        }
-
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-        }
-
-        private void llblForward_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void llblForward_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             using (FrmUserPickingList frm = new FrmUserPickingList())
             {
                 frm.ShowDialog(this);
                 if (frm.DialogResult == DialogResult.OK)
                 {
-                    serviceMethods.MoveTicketToAnotherUser(ticketHeader,frm.selectedUser);
+                    serviceMethods.MoveTicketToAnotherUser(ticketHeader, frm.selectedUser);
                     serviceMethods.AddComment(ticketHeader, frm.comment);
                     //TODO: dorobić zamknięcie
                 }

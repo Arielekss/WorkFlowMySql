@@ -85,6 +85,7 @@
             this.llblForward.TabIndex = 20;
             this.llblForward.TabStop = true;
             this.llblForward.Text = "Forward";
+            this.llblForward.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblForward_LinkClicked_1);
             // 
             // status
             // 
@@ -134,21 +135,23 @@
             // 
             // btnTicketCancel
             // 
-            this.btnTicketCancel.Location = new System.Drawing.Point(10, 309);
+            this.btnTicketCancel.Location = new System.Drawing.Point(6, 305);
             this.btnTicketCancel.Name = "btnTicketCancel";
-            this.btnTicketCancel.Size = new System.Drawing.Size(84, 23);
+            this.btnTicketCancel.Size = new System.Drawing.Size(114, 36);
             this.btnTicketCancel.TabIndex = 15;
             this.btnTicketCancel.Text = "Cancel Ticket";
             this.btnTicketCancel.UseVisualStyleBackColor = true;
+            this.btnTicketCancel.Click += new System.EventHandler(this.btnTicketCancel_Click_1);
             // 
             // btnCloseTicket
             // 
-            this.btnCloseTicket.Location = new System.Drawing.Point(582, 309);
+            this.btnCloseTicket.Location = new System.Drawing.Point(550, 305);
             this.btnCloseTicket.Name = "btnCloseTicket";
-            this.btnCloseTicket.Size = new System.Drawing.Size(75, 23);
+            this.btnCloseTicket.Size = new System.Drawing.Size(114, 36);
             this.btnCloseTicket.TabIndex = 14;
             this.btnCloseTicket.Text = "Close Ticket";
             this.btnCloseTicket.UseVisualStyleBackColor = true;
+            this.btnCloseTicket.Click += new System.EventHandler(this.btnCloseTicket_Click_1);
             // 
             // tabControl1
             // 

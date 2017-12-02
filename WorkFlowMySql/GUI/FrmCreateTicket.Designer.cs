@@ -47,9 +47,9 @@
             // btnSubmit
             // 
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSubmit.Location = new System.Drawing.Point(374, 636);
+            this.btnSubmit.Location = new System.Drawing.Point(303, 634);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(114, 36);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(455, 636);
+            this.btnCancel.Location = new System.Drawing.Point(423, 634);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(114, 36);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // 
             this.rtxtTicketContent.Location = new System.Drawing.Point(6, 101);
             this.rtxtTicketContent.Name = "rtxtTicketContent";
-            this.rtxtTicketContent.Size = new System.Drawing.Size(485, 217);
+            this.rtxtTicketContent.Size = new System.Drawing.Size(519, 217);
             this.rtxtTicketContent.TabIndex = 10;
             this.rtxtTicketContent.Text = "";
             // 
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(542, 671);
+            this.ClientSize = new System.Drawing.Size(556, 682);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);

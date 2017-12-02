@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkFlowMySql.BLL;
 using WorkFlowMySql.GUI;
 
 namespace WorkFlowMySql.GUI
@@ -14,7 +16,8 @@ namespace WorkFlowMySql.GUI
     public partial class FrmLoginMenu : Form
     {
         UserModel user = new UserModel();
-        
+        UserMethods userMethods = new UserMethods();
+
         public FrmLoginMenu()
         {
             InitializeComponent();
@@ -23,13 +26,14 @@ namespace WorkFlowMySql.GUI
 
         private void CopyValueFromControls()
         {
-            if(!string.IsNullOrEmpty(txtLogin.Text))
+            if (!string.IsNullOrEmpty(txtLogin.Text))
             {
                 user.UserName = txtLogin.Text;
             }
             if (!string.IsNullOrEmpty(txtPass.Text))
             {
-                user.Pass = txtPass.Text;
+
+                user.Pass = userMethods.HashPassword(txtPass.Text);
             }
         }
 
@@ -49,7 +53,7 @@ namespace WorkFlowMySql.GUI
                 var CustomerQuery = context.Customer.Where(s => s.UserName == user.UserName);
                 foreach (var users in CustomerQuery)
                 {
-                    userPass = users.Pass;
+                    userPass = users.Pass; 
                 }
             }
             return userPass;
