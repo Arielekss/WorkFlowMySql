@@ -93,6 +93,16 @@ namespace WorkFlowMySql.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Problems_How {
+            get {
+                object obj = ResourceManager.GetObject("Problems-How", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SaaS_Help_Desk_Software_Comparison {
             get {
                 object obj = ResourceManager.GetObject("SaaS-Help-Desk-Software-Comparison", resourceCulture);
