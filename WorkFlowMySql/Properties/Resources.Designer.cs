@@ -63,6 +63,16 @@ namespace WorkFlowMySql.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _518163_636213663522901785_16x9 {
+            get {
+                object obj = ResourceManager.GetObject("518163-636213663522901785-16x9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap main_qimg_0a4a89cb00ef290cf45c1a0e468a6b30 {
             get {
                 object obj = ResourceManager.GetObject("main-qimg-0a4a89cb00ef290cf45c1a0e468a6b30", resourceCulture);
