@@ -19,28 +19,7 @@ namespace WorkFlowMySql.GUI
         {
             InitializeComponent();
         }
-
-        private void llblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            using (FrmRegisteration frm = new FrmRegisteration())
-            {
-               frm.ShowDialog(this);
-            }
-        }
-
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-            CopyValueFromControls();
-           if(!ValidateUser())
-            {
-                MessageBox.Show("Wrong Login or Password");
-                return;
-            }
-            using (FrmUserMenu frm = new FrmUserMenu(user))
-            {
-                frm.ShowDialog(this);
-            }
-        }
+        
 
         private void CopyValueFromControls()
         {
@@ -75,13 +54,30 @@ namespace WorkFlowMySql.GUI
             }
             return userPass;
         }
-
-        private void FrmLoginMenu_Load(object sender, EventArgs e)
+        
+        private void btnRegister_Click(object sender, EventArgs e)
         {
+            using (FrmRegisteration frm = new FrmRegisteration())
+            {
+                frm.ShowDialog(this);
+            }
+        }
 
+        private void btnLogIn_Click_1(object sender, EventArgs e)
+        {
+            CopyValueFromControls();
+            if (!ValidateUser())
+            {
+                MessageBox.Show("Wrong Login or Password");
+                return;
+            }
+            using (FrmUserMenu frm = new FrmUserMenu(user))
+            {
+                frm.ShowDialog(this);
+            }
         }
         /*var CustomerQuery = context.Customer.Where(s => s.UserId == 1).ToList();
-           var user = CustomerQuery.FirstOrDefault<UserModel>();
-           MessageBox.Show(string.Format("{0}", user.UserName));*/
+var user = CustomerQuery.FirstOrDefault<UserModel>();
+MessageBox.Show(string.Format("{0}", user.UserName));*/
     }
 }

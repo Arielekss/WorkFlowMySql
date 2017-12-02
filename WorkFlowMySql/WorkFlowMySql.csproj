@@ -196,6 +196,7 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\modern-login-form_1017-7975.jpg" />
     <None Include="Resources\Problems-How.png" />
     <None Include="Resources\join-us_banner1.jpg" />
     <None Include="Resources\SaaS-Help-Desk-Software-Comparison.jpg" />

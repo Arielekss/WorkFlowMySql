@@ -46,7 +46,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(44, 27);
+            this.txtUser.Location = new System.Drawing.Point(56, 28);
             this.txtUser.Name = "txtUser";
             this.txtUser.ReadOnly = true;
             this.txtUser.Size = new System.Drawing.Size(100, 20);
@@ -55,18 +55,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(6, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "User:";
             // 
             // btnCreateTick
             // 
             this.btnCreateTick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateTick.Location = new System.Drawing.Point(75, 32);
+            this.btnCreateTick.Location = new System.Drawing.Point(5, 18);
             this.btnCreateTick.Name = "btnCreateTick";
-            this.btnCreateTick.Size = new System.Drawing.Size(86, 23);
+            this.btnCreateTick.Size = new System.Drawing.Size(114, 36);
             this.btnCreateTick.TabIndex = 2;
             this.btnCreateTick.Text = "Create Ticket";
             this.btnCreateTick.UseVisualStyleBackColor = true;
@@ -75,9 +76,9 @@
             // btnTicketView
             // 
             this.btnTicketView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTicketView.Location = new System.Drawing.Point(248, 32);
+            this.btnTicketView.Location = new System.Drawing.Point(245, 18);
             this.btnTicketView.Name = "btnTicketView";
-            this.btnTicketView.Size = new System.Drawing.Size(75, 23);
+            this.btnTicketView.Size = new System.Drawing.Size(114, 36);
             this.btnTicketView.TabIndex = 3;
             this.btnTicketView.Text = "View Ticket";
             this.btnTicketView.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@
             // btnLogout
             // 
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnLogout.Location = new System.Drawing.Point(175, 25);
+            this.btnLogout.Location = new System.Drawing.Point(175, 18);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.Size = new System.Drawing.Size(75, 36);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -96,9 +97,9 @@
             // btnUserTick
             // 
             this.btnUserTick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserTick.Location = new System.Drawing.Point(167, 32);
+            this.btnUserTick.Location = new System.Drawing.Point(125, 18);
             this.btnUserTick.Name = "btnUserTick";
-            this.btnUserTick.Size = new System.Drawing.Size(75, 23);
+            this.btnUserTick.Size = new System.Drawing.Size(114, 36);
             this.btnUserTick.TabIndex = 5;
             this.btnUserTick.Text = "User Ticket";
             this.btnUserTick.UseVisualStyleBackColor = true;
@@ -109,9 +110,9 @@
             this.groupBox1.Controls.Add(this.btnUserTick);
             this.groupBox1.Controls.Add(this.btnCreateTick);
             this.groupBox1.Controls.Add(this.btnTicketView);
-            this.groupBox1.Location = new System.Drawing.Point(318, 352);
+            this.groupBox1.Location = new System.Drawing.Point(284, 352);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(336, 70);
+            this.groupBox1.Size = new System.Drawing.Size(370, 70);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Service actions";
