@@ -73,9 +73,29 @@ namespace WorkFlowMySql.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap join_us_banner1 {
+            get {
+                object obj = ResourceManager.GetObject("join-us_banner1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap main_qimg_0a4a89cb00ef290cf45c1a0e468a6b30 {
             get {
                 object obj = ResourceManager.GetObject("main-qimg-0a4a89cb00ef290cf45c1a0e468a6b30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaaS_Help_Desk_Software_Comparison {
+            get {
+                object obj = ResourceManager.GetObject("SaaS-Help-Desk-Software-Comparison", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -64,7 +64,7 @@
             // btnCreateTick
             // 
             this.btnCreateTick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateTick.Location = new System.Drawing.Point(75, 53);
+            this.btnCreateTick.Location = new System.Drawing.Point(75, 32);
             this.btnCreateTick.Name = "btnCreateTick";
             this.btnCreateTick.Size = new System.Drawing.Size(86, 23);
             this.btnCreateTick.TabIndex = 2;
@@ -75,7 +75,7 @@
             // btnTicketView
             // 
             this.btnTicketView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTicketView.Location = new System.Drawing.Point(248, 53);
+            this.btnTicketView.Location = new System.Drawing.Point(248, 32);
             this.btnTicketView.Name = "btnTicketView";
             this.btnTicketView.Size = new System.Drawing.Size(75, 23);
             this.btnTicketView.TabIndex = 3;
@@ -96,7 +96,7 @@
             // btnUserTick
             // 
             this.btnUserTick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserTick.Location = new System.Drawing.Point(167, 53);
+            this.btnUserTick.Location = new System.Drawing.Point(167, 32);
             this.btnUserTick.Name = "btnUserTick";
             this.btnUserTick.Size = new System.Drawing.Size(75, 23);
             this.btnUserTick.TabIndex = 5;
@@ -109,9 +109,9 @@
             this.groupBox1.Controls.Add(this.btnUserTick);
             this.groupBox1.Controls.Add(this.btnCreateTick);
             this.groupBox1.Controls.Add(this.btnTicketView);
-            this.groupBox1.Location = new System.Drawing.Point(318, 346);
+            this.groupBox1.Location = new System.Drawing.Point(318, 352);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(336, 91);
+            this.groupBox1.Size = new System.Drawing.Size(336, 70);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Service actions";
@@ -121,7 +121,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtUser);
             this.groupBox2.Controls.Add(this.btnLogout);
-            this.groupBox2.Location = new System.Drawing.Point(378, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 352);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(263, 70);
             this.groupBox2.TabIndex = 7;
@@ -131,18 +131,18 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 88);
+            this.panel1.Location = new System.Drawing.Point(1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 252);
+            this.panel1.Size = new System.Drawing.Size(664, 342);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::WorkFlowMySql.Properties.Resources.main_qimg_0a4a89cb00ef290cf45c1a0e468a6b30;
+            this.pictureBox1.Image = global::WorkFlowMySql.Properties.Resources._518163_636213663522901785_16x9;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(664, 252);
+            this.pictureBox1.Size = new System.Drawing.Size(664, 342);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

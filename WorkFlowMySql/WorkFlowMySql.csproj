@@ -196,6 +196,9 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\join-us_banner1.jpg" />
+    <None Include="Resources\SaaS-Help-Desk-Software-Comparison.jpg" />
+    <None Include="Resources\518163-636213663522901785-16x9.jpg" />
     <None Include="Resources\main-qimg-0a4a89cb00ef290cf45c1a0e468a6b30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
