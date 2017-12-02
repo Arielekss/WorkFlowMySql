@@ -75,8 +75,13 @@ namespace WorkFlowMySql.GUI
             }
             return userPass;
         }
+
+        private void FrmLoginMenu_Load(object sender, EventArgs e)
+        {
+
+        }
         /*var CustomerQuery = context.Customer.Where(s => s.UserId == 1).ToList();
-                    var user = CustomerQuery.FirstOrDefault<UserModel>();
-                    MessageBox.Show(string.Format("{0}", user.UserName));*/
+           var user = CustomerQuery.FirstOrDefault<UserModel>();
+           MessageBox.Show(string.Format("{0}", user.UserName));*/
     }
 }

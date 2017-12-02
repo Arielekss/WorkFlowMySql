@@ -16,6 +16,8 @@ namespace WorkFlowMySql.GUI
         UserMethods user = new UserMethods();
         public UserModel selectedUser = new UserModel();
         public string comment = String.Empty;
+        int? index = null;
+
         public FrmUserPickingList()
         {
             InitializeComponent();
@@ -25,14 +27,22 @@ namespace WorkFlowMySql.GUI
         {
             base.OnLoad(e);
             dbgChooseUser.DataSource = user.GetUserList();
+            if (index.HasValue)
+                btnChoose.Enabled = true;
+            else
+                btnChoose.Enabled = false;
         }
 
         private void dbgChooseUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow selectedRow = dbgChooseUser.Rows[index];
+            index = e.RowIndex;
+            DataGridViewRow selectedRow = dbgChooseUser.Rows[index.Value];
             selectedUser.UserId = Convert.ToInt32(selectedRow.Cells[0].Value);
             selectedUser.UserName = selectedRow.Cells[1].Value.ToString();
+            if (index.HasValue)
+                btnChoose.Enabled = true;
+            else
+                btnChoose.Enabled = false;
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -52,8 +62,10 @@ namespace WorkFlowMySql.GUI
                 comment = rTxtComment.Text;
                 return true;
             }
-            MessageBox.Show("Enter comment");
-            return false;
+            else
+            { MessageBox.Show("Enter comment");
+                return false;
+             }
         }
     }
 }
