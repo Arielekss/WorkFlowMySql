@@ -32,7 +32,11 @@ namespace WorkFlowMySql.GUI
             base.OnClosing(e);
             if (DialogResult != DialogResult.OK)
                 return;
-
+            if(!ConfirmValidation())
+            {
+                e.Cancel = true;
+                return;
+            }
             CopyValueFromControls();
             
         }
@@ -41,13 +45,15 @@ namespace WorkFlowMySql.GUI
         {
             if (!string.IsNullOrEmpty(txtUserName.Text))
             {
+
                 using (var context = new WorkFlowContext())
                 {
                     context.Customer.Add(new UserModel
                     {
                         Pass = userMethods.HashPassword(txtPass.Text),
                         UserName = txtUserName.Text,
-                        UserType = cbUserType.SelectedItem.ToString()
+                        UserType = cbUserType.SelectedItem.ToString(),
+                        Email = txtEmail.Text
                     });
                     context.SaveChanges();
                     MessageBox.Show("Registered succed");
@@ -58,6 +64,22 @@ namespace WorkFlowMySql.GUI
                     MessageBox.Show(string.Format("{0}", user.UserName));*/
                 }
             }
+            else
+                return;
+        }
+        private bool ConfirmValidation()
+        {
+            if(txtPass.Text !=txtConfPass.Text)
+            {
+                MessageBox.Show("Different passwords");
+                return false;
+            }
+            else if (txtEmail.Text != txtConfEmail.Text)
+            {
+                MessageBox.Show("Different email");
+                return false;
+            }
+            return true;
         }
     }
 }

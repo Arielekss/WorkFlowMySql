@@ -40,6 +40,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtConfPass = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtConfEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +64,7 @@
             this.cbUserType.Items.AddRange(new object[] {
             "Customer",
             "Employer"});
-            this.cbUserType.Location = new System.Drawing.Point(292, 48);
+            this.cbUserType.Location = new System.Drawing.Point(15, 99);
             this.cbUserType.Name = "cbUserType";
             this.cbUserType.Size = new System.Drawing.Size(126, 21);
             this.cbUserType.TabIndex = 2;
@@ -79,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(289, 25);
+            this.label2.Location = new System.Drawing.Point(12, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 18);
             this.label2.TabIndex = 4;
@@ -100,7 +106,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(390, 211);
+            this.btnCancel.Location = new System.Drawing.Point(407, 257);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
@@ -111,7 +117,7 @@
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.Location = new System.Drawing.Point(309, 211);
+            this.btnOk.Location = new System.Drawing.Point(326, 257);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 7;
@@ -127,6 +133,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtConfEmail);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtConfPass);
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPass);
@@ -135,7 +147,7 @@
             this.groupBox1.Controls.Add(this.cbUserType);
             this.groupBox1.Location = new System.Drawing.Point(6, 107);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(461, 98);
+            this.groupBox1.Size = new System.Drawing.Size(461, 144);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
@@ -159,6 +171,60 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtConfPass
+            // 
+            this.txtConfPass.Location = new System.Drawing.Point(160, 100);
+            this.txtConfPass.Name = "txtConfPass";
+            this.txtConfPass.Size = new System.Drawing.Size(126, 20);
+            this.txtConfPass.TabIndex = 9;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(306, 48);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(126, 20);
+            this.txtEmail.TabIndex = 10;
+            // 
+            // txtConfEmail
+            // 
+            this.txtConfEmail.Location = new System.Drawing.Point(306, 99);
+            this.txtConfEmail.Name = "txtConfEmail";
+            this.txtConfEmail.Size = new System.Drawing.Size(126, 20);
+            this.txtConfEmail.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(157, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Confirm password:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(303, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Enter email:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(303, 82);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 18);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Confirm email:";
+            // 
             // FrmRegisteration
             // 
             this.AcceptButton = this.btnOk;
@@ -166,7 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(116)))), ((int)(((byte)(211)))));
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(477, 246);
+            this.ClientSize = new System.Drawing.Size(494, 292);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOk);
@@ -198,5 +264,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtConfEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtConfPass;
     }
 }
