@@ -24,7 +24,7 @@ namespace WorkFlowMySql.BLL
                 mail.Body = string.Format("Please enter this code: {0} to WorkflowApp registration windows to confirm registration process.", securityCode);
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ariel.kazmierczak", "martwa90");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("ariel.kazmierczak", "xxx");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
