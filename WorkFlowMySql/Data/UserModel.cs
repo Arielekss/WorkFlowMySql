@@ -15,6 +15,6 @@ namespace WorkFlowMySql.GUI
         public string Pass { get; set; }
         public string UserType { get; set; }
         public string Email { get; set; }
-        public DateTime RegisterDate { get; set; }
+        public DateTime? RegisterDate { get; set; }
     }
 }
