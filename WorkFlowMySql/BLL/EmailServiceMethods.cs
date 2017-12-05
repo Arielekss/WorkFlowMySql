@@ -16,15 +16,15 @@ namespace WorkFlowMySql.BLL
             try
             {
                 MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                SmtpClient SmtpServer = new SmtpClient("smtp.poczta.onet.pl");
 
-                mail.From = new MailAddress("ariel.kazmierczak@gmail.com");
+                mail.From = new MailAddress("arielekss.workflowapp@onet.pl");
                 mail.To.Add(ReciverMail);
                 mail.Subject = "WorkflowApp security code";
                 mail.Body = string.Format("Please enter this code: {0} to WorkflowApp registration windows to confirm registration process.", securityCode);
 
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ariel.kazmierczak", "xxx");
+                SmtpServer.Port = 465; //587
+                SmtpServer.Credentials = new System.Net.NetworkCredential("arielekss.workflowapp", "Martwa90");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);

@@ -13,27 +13,38 @@ namespace WorkFlowMySql.BLL
     public class TicketServiceMethods
     {
         LogEventMethods log = new LogEventMethods();
+
+        private WorkFlowContext _context;
+
+        public TicketServiceMethods(WorkFlowContext context)
+        {
+            _context = context;
+        }
+        public TicketServiceMethods()
+        {
+            _context = new WorkFlowContext();
+        }
+
         public void UpdateTicketStatusById(int ticketId, string ticketStatus, string response)
         {
-            using (var context = new WorkFlowContext())
-            {
-               var ticket = context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
+           
+               var ticket = _context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
                 ticket.Status = ticketStatus;
                 ticket.CloseDate = DateTime.Now;
-                context.Ticket.AddOrUpdate(ticket);
+                _context.Ticket.AddOrUpdate(ticket);
 
                 if (ticketStatus == "Cancel")
-                    context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CancelTicket));
+                    _context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CancelTicket));
 
                 else if (ticketStatus == "Close")
                 {
-                    var ticketBody = context.TicketBody.Where(s => s.TicketGuid == ticket.Guid).ToList().FirstOrDefault();
+                    var ticketBody = _context.TicketBody.Where(s => s.TicketGuid == ticket.Guid).ToList().FirstOrDefault();
                     ticketBody.Response = response;
-                    context.TicketBody.AddOrUpdate(ticketBody);
-                    context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CloseTicket));
+                    _context.TicketBody.AddOrUpdate(ticketBody);
+                    _context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CloseTicket));
                 }
-                context.SaveChanges();
-            }
+                _context.SaveChanges();
+            
         }
         public void UpdateTicketResponseById()
         {

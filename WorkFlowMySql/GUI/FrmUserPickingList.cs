@@ -26,7 +26,6 @@ namespace WorkFlowMySql.GUI
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            DataTable dt = Da
             dbgChooseUser.DataSource = user.GetUserList();
             if (index.HasValue)
                 btnChoose.Enabled = true;
