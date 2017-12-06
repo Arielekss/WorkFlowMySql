@@ -15,7 +15,7 @@ namespace WorkFlowMySql
         public WorkFlowContext() : base(nameOrConnectionString: "WorkFlowContext") { }
 
         public DbSet<UserModel> Customer { get; set; }
-        public DbSet<TicketHeader> Ticket { get; set; }
+        public virtual DbSet<TicketHeader> Ticket { get; set; }
         public DbSet<TicketBody> TicketBody { get; set; }
         public DbSet<EventLog> EventLogContext { get; set; }
         public DbSet<Commentary> CommentaryContext { get; set; }

@@ -3,62 +3,50 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Coderful.EntityFramework.Testing.Mock;
+using WorkFlowMySql.BLL.Interfaces;
 using WorkFlowMySql.Data;
 using WorkFlowMySql.GUI;
+
 namespace WorkFlowMySql.BLL.UnitTests
 {
     [TestFixture]
     public class TicketServiceModuleTests
     {
-        [Test]
-        public void UpdateTicketStatusById()
-        {
-            /*var workflowrContextMock = new Mock<WorkFlowContext>();
-            workflowrContextMock.Setup(x => x.Ticket.Add(It.IsAny<TicketHeader>())).Returns(Mock);*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //arrange
-            //var mockSet = new Mock<DbSet<TicketHeader>>();
-            //var mockContext = new Mock<WorkFlowContext>();
-
-            var workflowrContextMock = new Mock<WorkFlowContext>();
-            workflowrContextMock.Setup(x => x.Ticket.Add(It.IsAny<TicketHeader>())).Returns(new TicketHeader
-            {
-                TicketId = 1,
-                Header = "EntityTest",
-                RegisterDate = DateTime.Now,
-                UserRegister = "Ariel",
-                ActiveUser = It.IsAny<string>(),
-                ActiveUserId = It.IsAny<int>(),
-                Guid = Guid.NewGuid().ToString()
-            });
         
+        [Test]
+        public void EntityTest()
+        {
+            // Arrange
+            var ticket = new List<TicketHeader>
+            {
+                new TicketHeader()
+                {
+                    TicketId = 1,
+                    ActiveUser = "Ariel"
+                },
+                new TicketHeader()
+                {
+                    TicketId = 2,
+                    ActiveUser = "Marlena"
+                }
+            };
+            var dbContext = MockUtylity.MockDbContext(
+                tickets: ticket).DbContext.Object;
 
-        //act
-         /*    string ticketStatus = "Cancel";
-             var ticketService = new TicketServiceMethods(mockContext.Object);
-             ticketService.UpdateTicketStatusById(It.IsAny<int>(), ticketStatus, It.IsAny<string>());
+            //Act
+            TicketServiceMethods ticketMethods = new TicketServiceMethods();
+            ticketMethods.UpdateTicketStatusById(1,"Cancel", "test");
+            var result = dbContext.Ticket.Where(s => s.TicketId == 1).ToList().FirstOrDefault();
+            dbContext.SaveChanges();
 
-
-             //assert
-             mockSet.Verify(m => m.Add(It.IsAny<TicketHeader>()), Times.Once());*/
+            // Assert
+            Assert.Equals("Cancel", result.Status);
         }
+
     }
 }
