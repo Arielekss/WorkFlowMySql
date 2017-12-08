@@ -14,7 +14,7 @@ namespace WorkFlowMySql.BLL
     {
         LogEventMethods log = new LogEventMethods();
 
-      /*  private WorkFlowContext _context;
+        private WorkFlowContext _context;
 
         public TicketServiceMethods(WorkFlowContext context)
         {
@@ -23,13 +23,12 @@ namespace WorkFlowMySql.BLL
         public TicketServiceMethods()
         {
             _context = new WorkFlowContext();
-        }*/
+        }
 
         public void UpdateTicketStatusById(int ticketId, string ticketStatus, string response)
         {
-            using (var _context = new WorkFlowContext())
-            {
-                var ticket = _context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
+           
+               var ticket = _context.Ticket.Where(s => s.TicketId == ticketId).ToList().FirstOrDefault();
                 ticket.Status = ticketStatus;
                 ticket.CloseDate = DateTime.Now;
                 _context.Ticket.AddOrUpdate(ticket);
@@ -39,14 +38,13 @@ namespace WorkFlowMySql.BLL
 
                 else if (ticketStatus == "Close")
                 {
-                    var ticketBody = _context.TicketBody.Where(s => s.TicketGuid == ticket.Guid).ToList()
-                        .FirstOrDefault();
+                    var ticketBody = _context.TicketBody.Where(s => s.TicketGuid == ticket.Guid).ToList().FirstOrDefault();
                     ticketBody.Response = response;
                     _context.TicketBody.AddOrUpdate(ticketBody);
                     _context.EventLogContext.Add(log.CreatEventLog(ticket, EventEnum.CloseTicket));
                 }
                 _context.SaveChanges();
-            }
+            
         }
         public void UpdateTicketResponseById()
         {

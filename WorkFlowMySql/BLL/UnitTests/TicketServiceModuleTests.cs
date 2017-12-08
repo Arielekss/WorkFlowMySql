@@ -39,7 +39,7 @@ namespace WorkFlowMySql.BLL.UnitTests
                 tickets: ticket).DbContext.Object;
 
             //Act
-            TicketServiceMethods ticketMethods = new TicketServiceMethods();
+            TicketServiceMethods ticketMethods = new TicketServiceMethods(dbContext);
             ticketMethods.UpdateTicketStatusById(1,"Cancel", "test");
             var result = dbContext.Ticket.Where(s => s.TicketId == 1).ToList().FirstOrDefault();
             dbContext.SaveChanges();

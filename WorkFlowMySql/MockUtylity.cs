@@ -19,7 +19,7 @@ namespace WorkFlowMySql
             // Create the DbSet objects.
             var dbSets = new object[]
             {
-                mockContext.MockDbSet(tickets, (objects, ticket) => ticket.TicketId == (int)objects[0] && ticket.ActiveUserId == (int)objects[1])
+                mockContext.MockDbSet(tickets, (objects, ticket) => ticket.TicketId == (int)objects[0] && ticket.ActiveUserId == (int)objects[1] && ticket.Status == (string)objects[2])
             };
 
             return new MockedDbContext<WorkFlowContext>(mockContext, dbSets);

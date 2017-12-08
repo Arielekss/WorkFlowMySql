@@ -78,6 +78,8 @@
     <Compile Include="BLL\TicketCreator.cs" />
     <Compile Include="BLL\TicketServiceMethods.cs" />
     <Compile Include="BLL\TicketViewMethods.cs" />
+    <Compile Include="BLL\UnitTests\MockableDbSetWithExtensions.cs" />
+    <Compile Include="BLL\UnitTests\Tests.cs" />
     <Compile Include="BLL\UnitTests\TicketServiceModuleTests.cs" />
     <Compile Include="BLL\UserMethods.cs" />
     <Compile Include="Data\Commentary.cs" />
