@@ -73,15 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EmailServiceMethods.cs" />
-    <Compile Include="BLL\Interfaces\IUserRegistration.cs" />
     <Compile Include="BLL\LogEventMethods.cs" />
     <Compile Include="BLL\TicketCreator.cs" />
     <Compile Include="BLL\TicketServiceMethods.cs" />
     <Compile Include="BLL\TicketViewMethods.cs" />
-    <Compile Include="BLL\UnitTests\MockableDbSetWithExtensions.cs" />
-    <Compile Include="BLL\UnitTests\Tests.cs" />
-    <Compile Include="BLL\UnitTests\TicketServiceModuleTests.cs" />
     <Compile Include="BLL\UserMethods.cs" />
+    <Compile Include="BLL\User\UserRegistration.cs" />
+    <Compile Include="BLL\User\UserValidation.cs" />
     <Compile Include="Data\Commentary.cs" />
     <Compile Include="Data\Enums\EventEnum.cs" />
     <Compile Include="Data\EventLog.cs" />

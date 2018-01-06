@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using WorkflowMVC.Models;
 using WorkFlowMySql.Data;
+using WorkFlowMySql.GUI;
 
 namespace WorkflowMVC.MapMethods
 {
@@ -68,6 +69,33 @@ namespace WorkflowMVC.MapMethods
                 Id = webTicketContent.Id,
                 Content = webTicketContent.Content
             };
+        }
+
+        public WebUserModel MapWebUserModel2UserModelMapUserModel2WebUserModel(UserModel userModel)
+        {
+            return new WebUserModel()
+            {
+                UserId = userModel.UserId,
+                UserName = userModel.UserName,
+                Pass = userModel.Pass,
+                Email = userModel.Email,
+                RegisterDate = userModel.RegisterDate,
+                UserType = userModel.UserType
+            };
+        }
+
+        public UserModel MapWebUserModel2UserModel(WebUserModel webUserModel)
+        {
+            return new UserModel()
+            {
+                UserId = webUserModel.UserId,
+                UserName = webUserModel.UserName,
+                Pass = webUserModel.Pass,
+                Email = webUserModel.Email,
+                RegisterDate = webUserModel.RegisterDate,
+                UserType = webUserModel.UserType
+            };
+
         }
     }
 }

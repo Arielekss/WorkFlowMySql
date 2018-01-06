@@ -7,13 +7,18 @@ using System.Web.Mvc;
 using WorkflowMVC.MapMethods;
 using WorkflowMVC.Models;
 using WorkFlowMySql.BLL;
+using WorkFlowMySql.BLL.User;
 using WorkFlowMySql.Data;
+using WorkFlowMySql.GUI;
 
 namespace WorkflowMVC.Controllers
 {
     public class HomeController : Controller
     {
-        TicketHeader ticketModel = new TicketHeader();
+        private TicketHeader ticketModel = new TicketHeader();
+        private UserModel userModel = new UserModel();
+        private UserRegistration userRegistration = new UserRegistration();
+        private UserValidation userValidation = new UserValidation();
         private ModelsMapper mapper = new ModelsMapper();
         private TicketViewMethods ticketViewMethod = new TicketViewMethods();
         WorkFlowMySql.BLL.TicketCreator ticketCreator = new TicketCreator();
@@ -51,6 +56,31 @@ namespace WorkflowMVC.Controllers
             List<WebTicketHeader> list = new List<WebTicketHeader>();
             list = mapper.MapTicketModelList2TicketList(ticketViewMethod.GetTicketList());
             return View(list);
+        }
+
+        public ActionResult LogIn(WebUserModel webUserModel)
+        {
+            if(userValidation.ValidateUserLoginAndPassword(userModel = mapper.MapWebUserModel2UserModel(webUserModel)))
+            return View("TicketCreator");
+            else
+            {
+                return View("Index");
+            }
+        }
+
+        public ActionResult Register()
+        {
+            return View("Register");
+        }
+
+        public ActionResult CreateUser(WebUserModel webUserModel)
+        {
+            userModel = mapper.MapWebUserModel2UserModel(webUserModel);
+            if (userModel != null)
+            {
+                userRegistration.CreateUserAccount(userModel);
+            }
+            return View("Index");
         }
     }
 }

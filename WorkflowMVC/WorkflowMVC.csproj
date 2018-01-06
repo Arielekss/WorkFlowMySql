@@ -179,6 +179,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MapMethods\ModelsMapper.cs" />
+    <Compile Include="Models\WebUserModel.cs" />
     <Compile Include="Models\WebTicketHeader.cs" />
     <Compile Include="Models\WebTicketBody.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,6 +232,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\TicketCreator.cshtml" />
     <Content Include="Views\Home\TicketList.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

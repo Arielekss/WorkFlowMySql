@@ -1,0 +1,49 @@
+﻿@model WorkflowMVC.Models.WebUserModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("CreateUser", "Home", FormMethod.Post))
+{
+    <style>
+        .center {
+            margin: auto;
+            width: 30%;
+            padding: 10px;
+        }
+    </style>
+    <form>
+        <div class="row" style="text-align: center">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">User name</label>
+                    <div class="center">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Password</label>
+                    <div class="center">
+                        @Html.TextBoxFor(m => m.Pass, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Email</label>
+                    <div class="center">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button id="submitt" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </form>
+}

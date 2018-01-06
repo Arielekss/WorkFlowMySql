@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkFlowMySql.BLL;
+using WorkFlowMySql.Data;
 using WorkFlowMySql.GUI;
 
 namespace WorkFlowMySql.GUI
